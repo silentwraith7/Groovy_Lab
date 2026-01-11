@@ -1,0 +1,28 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+app/build
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# IDE - VS Code
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+
+# Downloaded libraries (Gradle manages dependencies)
+lib/
