@@ -21,19 +21,21 @@ class App {
     static void main(String[] args) {
         // App app = new App()
         // ItemList itemList = new ItemList()
-        // List <Map> priceMap =  new PriceObject().priceMap
+        List <Map> priceMap =  new PriceObject().priceMap
         // println app.greeting
         // itemList.list.each { println it ? it.toUpperCase() : 'UNKNOWN' }
         // itemList.list.eachWithIndex { item, idx -> println "$idx : ${item ? item.toUpperCase() : 'UNKNOWN'}" }
         // println(new PriceObject().calculateFinalPrices())
         // println(new PriceObject().filterByRegion('US'))
-        def pricingRules = new ConfigLoader().getAllPricingRules()
-        if (!pricingRules.rules) {
-            // println('Aint no rules yo')
-            log.severe('Aint no rules yo')
-            throw new Exception('Bye Bye')
-        }
-        println(new ConfigLoader().getPricingRulesBySegment('FREE'))
+        List <Map> modifiedProducts =  new PricingEngine().applyRules(priceMap)
+        println(modifiedProducts)
+        // def pricingRules = new ConfigLoader().getAllPricingRules()
+        // if (!pricingRules.rules) {
+        //     // println('Aint no rules yo')
+        //     log.severe('Aint no rules yo')
+        //     throw new Exception('Bye Bye')
+        // }
+        // println(new ConfigLoader().getPricingRulesBySegment('FREE'))
     }
 
 }
