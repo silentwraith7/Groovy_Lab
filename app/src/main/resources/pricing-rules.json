@@ -1,0 +1,26 @@
+{
+    "rules": [
+        {
+            "name": "B2B Standard Discount",
+            "segment": "B2B",
+            "discountPercent": 10
+        },
+        {
+            "name": "Enterprise Premium Discount",
+            "segment": "ENTERPRISE",
+            "discountPercent": 20
+        },
+        {
+            "name": "Free Tier - No Discount",
+            "segment": "FREE",
+            "discountPercent": 0
+        },
+        {
+            "name": "VIP Customer Discount",
+            "segment": "VIP",
+            "discountPercent": 25
+        }
+    ],
+    "defaultDiscount": 0,
+    "maxDiscountPercent": 50
+}
