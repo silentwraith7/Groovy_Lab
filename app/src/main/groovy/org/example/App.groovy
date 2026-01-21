@@ -28,7 +28,7 @@ class App {
         // println(new PriceObject().calculateFinalPrices())
         // println(new PriceObject().filterByRegion('US'))
         List <Map> modifiedProducts =  new PricingEngine().applyRules(priceMap)
-        println(modifiedProducts)
+        println("Finalised Products --------> ${modifiedProducts}")
         // def pricingRules = new ConfigLoader().getAllPricingRules()
         // if (!pricingRules.rules) {
         //     // println('Aint no rules yo')

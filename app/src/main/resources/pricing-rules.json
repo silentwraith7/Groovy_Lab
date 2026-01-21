@@ -3,24 +3,46 @@
         {
             "name": "B2B Standard Discount",
             "segment": "B2B",
-            "discountPercent": 10
+            "discountPercent": 10,
+            "priority": 100
+        },
+        {
+            "name": "B2B Holiday Promo",
+            "segment": "B2B",
+            "discountPercent": 18,
+            "priority": 200
         },
         {
             "name": "Enterprise Premium Discount",
             "segment": "ENTERPRISE",
-            "discountPercent": 20
+            "discountPercent": 20,
+            "priority": 100
+        },
+        {
+            "name": "Enterprise Black Friday",
+            "segment": "ENTERPRISE",
+            "discountPercent": 35,
+            "priority": 150
         },
         {
             "name": "Free Tier - No Discount",
             "segment": "FREE",
-            "discountPercent": 0
+            "discountPercent": 0,
+            "priority": 100
         },
         {
             "name": "VIP Customer Discount",
             "segment": "VIP",
-            "discountPercent": 25
+            "discountPercent": 25,
+            "priority": 100
+        },
+        {
+            "name": "VIP Exclusive Deal",
+            "segment": "VIP",
+            "discountPercent": 40,
+            "priority": 300
         }
     ],
-    "defaultDiscount": 0,
+    "defaultDiscount": 5,
     "maxDiscountPercent": 50
 }

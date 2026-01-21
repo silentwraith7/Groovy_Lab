@@ -5,43 +5,69 @@ import groovy.util.logging.Log
 @Log
 class PriceObject {
 
-    List <Map> priceMap = [
-             [ basePrice: 1000,
-             currency: 'USD',
-             productCode: 'PROD-1',
+    List<Map> priceMap = [
+        [
+            basePrice: 1000,
+            currency: 'USD',
+            productCode: 'PROD-1',
             customerSegment: 'B2B',
             region: 'APAC',
-            discount: 0.10,
-            ],
-                     [
+            discount: 0.10
+        ],
+        [
             basePrice: -50,
             currency: 'USD',
             productCode: 'PROD-2',
             customerSegment: 'B2B',
-            region: 'EU',
-],
-            [
+            region: 'EU'
+        ],
+        [
             basePrice: 500,
             currency: 'EUR',
             productCode: 'PROD-3',
             customerSegment: 'FREE',
-            region: 'EU',
-],
-            [
+            region: 'EU'
+        ],
+        [
             basePrice: 800,
             currency: 'USD',
             productCode: 'PROD-4',
             customerSegment: 'ENTERPRISE',
             region: 'US',
-            discount: 0.50,
-],
-            [
+            discount: 0.50
+        ],
+        [
             basePrice: 300,
             currency: 'USD',
             productCode: 'PROD-5',
             customerSegment: 'ENTERPRISE',
-            region: 'US',
-             ]
+            region: 'US'
+        ],
+        // NEW: Segments without rules (tests fallback)
+        [
+            basePrice: 250,
+            currency: 'USD',
+            productCode: 'PROD-6',
+            customerSegment: 'RETAIL',
+            region: 'US'
+        ],
+        [
+            basePrice: 1500,
+            currency: 'USD',
+            productCode: 'PROD-7',
+            customerSegment: 'WHOLESALE',
+            region: 'EU',
+            discount: 0.15
+        ],
+        // NEW: VIP segment (tests high priority rule)
+        [
+            basePrice: 2000,
+            currency: 'USD',
+            productCode: 'PROD-8',
+            customerSegment: 'VIP',
+            region: 'APAC',
+            discount: 0.20
+        ]
     ]
 
     List <Map> getPriceMap() {
